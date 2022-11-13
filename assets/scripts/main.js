@@ -15,7 +15,6 @@ window.addEventListener('DOMContentLoaded', init);
 
 // Starts the program, all function calls trace back here
 async function init() {
-  console.log("HELLO?");
   // initialize ServiceWorker
   initializeServiceWorker();
   // Get the recipes from localStorage
@@ -45,7 +44,6 @@ function initializeServiceWorker() {
   /*******************/
   // We first must register our ServiceWorker here before any of the code in
   // sw.js is executed.
-  console.log("init");
   // B1. TODO - Check if 'serviceWorker' is supported in the current browser
   if('serviceWorker' in navigator){
   // B2. TODO - Listen for the 'load' event on the window object.
@@ -64,9 +62,6 @@ function initializeServiceWorker() {
         console.log("Service worker registration failed with" + caughtError);
       }
     });
-  }
-  else{
-    console.log("wrong");
   }
   // STEPS B6 ONWARDS WILL BE IN /sw.js
 }
